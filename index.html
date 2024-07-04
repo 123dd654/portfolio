@@ -22,7 +22,6 @@
 
         body {
             background-color: #0A090F;
-            padding: 20px;
         }
 
         #wrap {
@@ -32,17 +31,25 @@
         }
 
         #header {
-            width: 20%;
+            width: 360px;
             height: 100%;
-            border-right: 1px solid #fff;
+            /* border-right: 1px solid #fff; */
             display: flex;
-            /* align-items: center; */
-            justify-content: center;
+            /* justify-content: center; */
+            flex-direction: column;
+            align-items: center;
         }
 
         .profile {
             width: 100%;
+            margin-top: 40px;
             text-align: center;
+        }
+
+        .profile-image {
+            margin-top: -10px;
+            position: relative;
+            z-index: 1;
         }
 
         #main {
@@ -54,60 +61,95 @@
             width: 10%;
             height: 100%;
         }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .bouncing-circle {
+            animation: bounce 1s infinite;
+        }
+
+        #visualizer {
+            width: 150px;
+            height: 40px;
+            margin-bottom: 5px;
+            position: absolute;
+            top: 260px;
+            left: 170px;
+        }
+
+        #controls {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            position: absolute;
+            top: 290px;
+            left: 220px;
+        }
+
+        button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 3px 6px;
+            cursor: pointer;
+            font-size: 10px;
+            z-index: 1000;
+        }
+
+        #repeat {
+            font-size: 16px;
+            padding: 2px 4px;
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
     <div id="wrap">
         <div id="header">
             <div class="profile">
-                <svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0" y1="5" x2="300" y2="5" stroke="#6D6D6D" stroke-width="1"/>
-                    <rect x="0" y="3" width="5" height="4" fill="#D9D9D9"/>
-                    <rect x="150" y="3" width="5" height="4" fill="#D9D9D9"/>
-                    <rect x="295" y="3" width="5" height="4" fill="#D9D9D9"/>
-                    <line x1="2.5" y1="7" x2="2.5" y2="22" stroke="#6D6D6D" stroke-width="1"/>
-                    <line x1="297.5" y1="7" x2="297.5" y2="22" stroke="#6D6D6D" stroke-width="1"/>
-                    <rect x="0" y="22" width="5" height="3" fill="#D9D9D9"/>
-                    <rect x="295" y="22" width="5" height="3" fill="#D9D9D9"/>
-                    <text x="150" y="36" text-anchor="middle" fill="#A5AD89" font-size="46" font-family="AstroSpace" dominant-baseline="middle">PORTFOLIO</text>
-                    <line x1="0" y1="70" x2="300" y2="70" stroke="#6D6D6D" stroke-width="1"/>
-                    <rect x="0" y="68" width="5" height="4" fill="#D9D9D9"/>
-                    <rect x="150" y="68" width="5" height="4" fill="#D9D9D9"/>
-                    <rect x="295" y="68" width="5" height="4" fill="#D9D9D9"/>
-                    <line x1="0" y1="80" x2="300" y2="80" stroke="#6D6D6D" stroke-width="1"/>
-                    <rect x="0" y="78" width="5" height="4" fill="#D9D9D9"/>
-                    <rect x="150" y="78" width="5" height="4" fill="#D9D9D9"/>
-                    <rect x="295" y="78" width="5" height="4" fill="#D9D9D9"/>
+                <img src="./img/title.png" alt="">
+                <svg width="400" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="30" y1="50" x2="170" y2="50" stroke="#6D6D6D" stroke-width="1"/>
+                    <rect x="29" y="49" width="3" height="3" fill="#D9D9D9"/>
+                    <rect x="29" y="68" width="3" height="3" fill="#D9D9D9"/>
+                    <rect x="170" y="49" width="3" height="3" fill="#D9D9D9"/>
+                    <line x1="30" y1="70" x2="330" y2="70" stroke="#6D6D6D" stroke-width="1"/>
+                    <line x1="31" y1="30" x2="31" y2="90" stroke="#6D6D6D" stroke-width="1"/>
+                    <rect x="29" y="27" width="3" height="3" fill="#D9D9D9"/>
+                    <rect x="30" y="90" width="3" height="3" fill="#D9D9D9"/>
+                    <line x1="172" y1="20" x2="172" y2="50" stroke="#6D6D6D" stroke-width="1"/>
+                    <circle cx="50" cy="50" r="3" fill="#ED6A5A" class="bouncing-circle"/>
+                    <circle cx="74" cy="50" r="3" fill="#C0BC9C" class="bouncing-circle"/>
+                    <circle cx="98" cy="50" r="3" fill="#488DA3" class="bouncing-circle"/>
+                    <circle cx="125" cy="50" r="3" fill="#488DA3" class="bouncing-circle"/>
+                    <circle cx="150" cy="50" r="3" fill="#C0BC9C" class="bouncing-circle"/>
+                    <circle cx="98" cy="50" r="7" fill="none" stroke="#FF5336" stroke-width="1" class="bouncing-circle"/>
+                    <circle cx="150" cy="50" r="7" fill="none" stroke="#488DA3" stroke-width="1" class="bouncing-circle"/>
+                    <line x1="173" y1="20" x2="330" y2="20" stroke="#6D6D6D" stroke-width="1"/>
+                    <rect x="170" y="18" width="3" height="3" fill="#D9D9D9"/>
+                    <rect x="328" y="18" width="3" height="3" fill="#D9D9D9"/>
+                    <line x1="173" y1="62" x2="330" y2="62" stroke="#6D6D6D" stroke-width="1"/>
+                    <rect x="170" y="60" width="3" height="3" fill="#D9D9D9"/>
+                    <rect x="328" y="60" width="3" height="3" fill="#D9D9D9"/>
+                    <text id="time-text" x="185" y="50" fill="#66A5B6" font-size="28" font-family="Orbitron" font-weight="Reguler">22:00:00</text>
+                    <rect x="170" y="69" width="3" height="3" fill="#D9D9D9"/>
+                    <rect x="328" y="69" width="3" height="3" fill="#D9D9D9"/>
+                    <line x1="330" y1="20" x2="330" y2="70" stroke="#6D6D6D" stroke-width="1"/>
                 </svg>
-                <svg width="500" height="100" xmlns="http://www.w3.org/2000/svg">
-                    <!-- 첫 번째 선 -->
-                    <line x1="30" y1="30" x2="180" y2="30" stroke="#6D6D6D" stroke-width="1"/>
-                    <rect x="0" y="78" width="5" height="4" fill="#D9D9D9"/>
-                
-                    <!-- 원들 -->
-                    <circle cx="50" cy="30" r="3" fill="#ED6A5A"/>
-                    <circle cx="74" cy="30" r="3" fill="#C0BC9C"/>
-                    <circle cx="98" cy="30" r="3" fill="#488DA3"/>
-                    <circle cx="125" cy="30" r="3" fill="#488DA3"/>
-                    <circle cx="150" cy="30" r="3" fill="#C0BC9C"/>
-                    
-                    <!-- 둘레 원 -->
-                    <circle cx="98" cy="30" r="7" fill="none" stroke="#FF5336" stroke-width="1"/>
-                    <circle cx="150" cy="30" r="7" fill="none" stroke="#488DA3" stroke-width="1"/>
-                    
-                    <!-- 두 번째 선 -->
-                    <line x1="20" y1="70" x2="220" y2="70" stroke="#6D6D6D" stroke-width="1"/>
-                
-                    <!-- 시간 텍스트 -->
-                    <text id="time-text" x="160" y="35" fill="#66A5B6" font-size="30" font-family="Orbitron" font-weight="Reguler">22:00:00</text>
-                
-                    <!-- 버튼 텍스트 -->
-                    <rect x="240" y="50" width="80" height="30" fill="#404040"/>
-                    <text x="260" y="70" fill="#A5AD89" font-size="16" font-family="Arial" font-weight="bold">HOLLO!</text>
-                    <text x="340" y="70" fill="#A5AD89" font-size="16" font-family="Arial" font-weight="bold">VOICE FEED</text>
-                </svg>
-                
-                
+                <img src="./img/profile2.png" alt="#" class="profile-image">
+                <canvas id="visualizer"></canvas>
+                <div id="controls">
+                    <button id="playPause">▶</button>
+                    <button id="repeat">⟲</button>
+                </div>
+                <audio id="audioElement" src="space_audio.mp3" style="display: none;"></audio>
             </div>
         </div>
         <div id="main"></div>
@@ -125,6 +167,104 @@
 
         setInterval(updateTime, 1000);
         updateTime();  // 초기 호출로 즉시 업데이트
+
+        const canvas = document.getElementById('visualizer');
+        const ctx = canvas.getContext('2d');
+        const playPauseBtn = document.getElementById('playPause');
+        const repeatBtn = document.getElementById('repeat');
+        const audioElement = document.getElementById('audioElement');
+
+        let audioContext, analyser, source, dataArray, bufferLength;
+        let isPlaying = false;
+
+        canvas.width = 500;
+        canvas.height = 100;
+
+        function initAudio() {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            analyser = audioContext.createAnalyser();
+            analyser.fftSize = 2048;
+            bufferLength = analyser.frequencyBinCount;
+            dataArray = new Uint8Array(bufferLength);
+
+            source = audioContext.createMediaElementSource(audioElement);
+            source.connect(analyser);
+            analyser.connect(audioContext.destination);
+        }
+
+        function drawWaveform() {
+            requestAnimationFrame(drawWaveform);
+
+            if (audioContext) {
+                analyser.getByteTimeDomainData(dataArray);
+            } else {
+                // 초기 상태에서는 평평한 선을 그립니다
+                for (let i = 0; i < bufferLength; i++) {
+                    dataArray[i] = 128;
+                }
+            }
+
+            ctx.fillStyle = 'rgb(0, 0, 0)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'rgb(255, 255, 255)';
+            ctx.beginPath();
+
+            const sliceWidth = canvas.width * 1.0 / bufferLength;
+            let x = 0;
+
+            for (let i = 0; i < bufferLength; i++) {
+                const v = dataArray[i] / 128.0;
+                const y = v * canvas.height / 2;
+
+                if (i === 0) {
+                    ctx.moveTo(x, y);
+                } else {
+                    ctx.lineTo(x, y);
+                }
+
+                x += sliceWidth;
+            }
+
+            ctx.lineTo(canvas.width, canvas.height / 2);
+            ctx.stroke();
+        }
+
+        // 초기 상태에서 평평한 선을 그리기 위해 bufferLength와 dataArray를 초기화합니다
+        bufferLength = 1024;
+        dataArray = new Uint8Array(bufferLength).fill(128);
+
+        drawWaveform();
+
+        playPauseBtn.addEventListener('click', () => {
+            if (!audioContext) {
+                initAudio();
+            }
+
+            if (isPlaying) {
+                audioElement.pause();
+                playPauseBtn.textContent = '▶';
+            } else {
+                audioElement.play();
+                playPauseBtn.textContent = '❚❚';
+            }
+            isPlaying = !isPlaying;
+        });
+
+        repeatBtn.addEventListener('click', () => {
+            audioElement.currentTime = 0;
+            if (!isPlaying) {
+                audioElement.play();
+                playPauseBtn.textContent = '❚❚';
+                isPlaying = true;
+            }
+        });
+
+        audioElement.addEventListener('ended', () => {
+            isPlaying = false;
+            playPauseBtn.textContent = '▶';
+        });
     </script>
 </body>
 </html>
