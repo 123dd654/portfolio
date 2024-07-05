@@ -27,6 +27,10 @@
 
         body {
             background-color: #0A090F;
+            height: 100vh;
+            background-size: 20px 20px;
+            background-image: 
+                repeating-radial-gradient( rgb(72, 72, 72) 0px, black 2px, black 48px);
         }
 
         #wrap {
@@ -54,22 +58,47 @@
             font-family: 'astro';
             color: #A5AD89;
             position: absolute;
-            top: 42px;
+            top: 44px;
             left: 40px;
+        }
+
+        .voice{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            font-family: 'AstroSpace';
+            top: 204px;
+            left: 180px;
+            p{
+                color: #85A097;
+                background-color: rgba(53, 70, 71, 0.6);
+                font-size: 10px;
+                padding:  4px 10px;
+            }
+            span{
+                color: #85A097;
+                font-size: 10px;
+                margin-left: 6px;
+            }
         }
 
         .profile {
             width: 100%;
             margin-top: 40px;
             text-align: center;
+            
+            .profile-image {
+                margin-top: 14px;
+                position: relative;
+                z-index: 1;
+            }
+            
+            .profile-image2{
+                position: absolute;
+                top: 210px;
+                left: 40px;
+            }
         }
-
-        .profile-image {
-            margin-top: -10px;
-            position: relative;
-            z-index: 1;
-        }
-
 
         #main {
             width: 70%;
@@ -81,17 +110,30 @@
             height: 100%;
         }
 
-        @keyframes bounce {
+        @keyframes blink1 {
             0%, 100% {
-                transform: translateY(0);
+                opacity: 1;
             }
             50% {
-                transform: translateY(-5px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes blink2 {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
             }
         }
 
         .bouncing-circle {
-            animation: bounce 1s infinite;
+            animation: blink1 2s infinite;
+        }
+
+        .bouncing-circle2 {
+            animation: blink2 2s infinite;
         }
 
         #visualizer {
@@ -102,6 +144,7 @@
             top: 260px;
             left: 170px;
         }
+
 
         #controls {
             display: flex;
@@ -133,37 +176,22 @@
     <div id="wrap">
         <div id="header">
             <div class="profile">
-                <img src="./img/title.png" alt="" class="titleimg">
+                <img src="./img/profile_line01.svg" alt="#" class="titleimg">
                 <h1>PORTFOILO</h1>
                 <svg width="400" height="100" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="30" y1="50" x2="170" y2="50" stroke="#6D6D6D" stroke-width="1"/>
-                    <rect x="29" y="49" width="3" height="3" fill="#D9D9D9"/>
-                    <rect x="29" y="68" width="3" height="3" fill="#D9D9D9"/>
-                    <rect x="170" y="49" width="3" height="3" fill="#D9D9D9"/>
-                    <line x1="30" y1="70" x2="330" y2="70" stroke="#6D6D6D" stroke-width="1"/>
-                    <line x1="31" y1="30" x2="31" y2="90" stroke="#6D6D6D" stroke-width="1"/>
-                    <rect x="29" y="27" width="3" height="3" fill="#D9D9D9"/>
-                    <rect x="30" y="90" width="3" height="3" fill="#D9D9D9"/>
-                    <line x1="172" y1="20" x2="172" y2="50" stroke="#6D6D6D" stroke-width="1"/>
-                    <circle cx="50" cy="50" r="3" fill="#ED6A5A" class="bouncing-circle"/>
-                    <circle cx="74" cy="50" r="3" fill="#C0BC9C" class="bouncing-circle"/>
-                    <circle cx="98" cy="50" r="3" fill="#488DA3" class="bouncing-circle"/>
-                    <circle cx="125" cy="50" r="3" fill="#488DA3" class="bouncing-circle"/>
-                    <circle cx="150" cy="50" r="3" fill="#C0BC9C" class="bouncing-circle"/>
-                    <circle cx="98" cy="50" r="7" fill="none" stroke="#FF5336" stroke-width="1" class="bouncing-circle"/>
-                    <circle cx="150" cy="50" r="7" fill="none" stroke="#488DA3" stroke-width="1" class="bouncing-circle"/>
-                    <line x1="173" y1="20" x2="330" y2="20" stroke="#6D6D6D" stroke-width="1"/>
-                    <rect x="170" y="18" width="3" height="3" fill="#D9D9D9"/>
-                    <rect x="328" y="18" width="3" height="3" fill="#D9D9D9"/>
-                    <line x1="173" y1="62" x2="330" y2="62" stroke="#6D6D6D" stroke-width="1"/>
-                    <rect x="170" y="60" width="3" height="3" fill="#D9D9D9"/>
-                    <rect x="328" y="60" width="3" height="3" fill="#D9D9D9"/>
-                    <text id="time-text" x="180" y="50" fill="#66A5B6" font-size="30" font-family="Orbitron" font-weight="Reguler">22:00:00</text>
-                    <rect x="170" y="69" width="3" height="3" fill="#D9D9D9"/>
-                    <rect x="328" y="69" width="3" height="3" fill="#D9D9D9"/>
-                    <line x1="330" y1="20" x2="330" y2="70" stroke="#6D6D6D" stroke-width="1"/>
+                    <style>.c{fill:#D9D9D9}.l{stroke:#6D6D6D;stroke-width:1}</style>
+                    <g class="l"><line x1="30" y1="50" x2="170" y2="50"/><line x1="30" y1="70" x2="330" y2="70"/><line x1="31" y1="30" x2="31" y2="90"/><line x1="172" y1="20" x2="172" y2="50"/><line x1="173" y1="20" x2="330" y2="20"/><line x1="173" y1="62" x2="330" y2="62"/><line x1="330" y1="20" x2="330" y2="70"/></g>
+                    <g class="c"><rect x="29" y="49" width="3" height="3"/><rect x="29" y="68" width="3" height="3"/><rect x="170" y="49" width="3" height="3"/><rect x="29" y="27" width="3" height="3"/><rect x="30" y="90" width="3" height="3"/><rect x="170" y="18" width="3" height="3"/><rect x="328" y="18" width="3" height="3"/><rect x="170" y="60" width="3" height="3"/><rect x="328" y="60" width="3" height="3"/><rect x="170" y="69" width="3" height="3"/><rect x="328" y="69" width="3" height="3"/></g>
+                    <g fill="none" stroke-width="1"><circle cx="98" cy="50" r="7" stroke="#FF5336" class="bouncing-circle"/><circle cx="150" cy="50" r="7" stroke="#488DA3" class="bouncing-circle"/></g>
+                    <g><circle cx="50" cy="50" r="3" fill="#ED6A5A" class="bouncing-circle"/><circle cx="74" cy="50" r="3" fill="#C0BC9C" class="bouncing-circle2"/><circle cx="98" cy="50" r="3" fill="#488DA3" class="bouncing-circle"/><circle cx="125" cy="50" r="3" fill="#488DA3" class="bouncing-circle2"/><circle cx="150" cy="50" r="3" fill="#C0BC9C" class="bouncing-circle"/></g>
+                    <text id="time-text" x="180" y="50" fill="#66A5B6" font-size="28" font-family="Orbitron">22:00:00</text>
                 </svg>
-                <img src="./img/profile2.png" alt="#" class="profile-image">
+                <div class="voice">
+                    <p>HOLLO!</p>
+                    <span>VOICE FEED</span>
+                </div>
+                <img src="./img/profile_line03.svg" alt="#" class="profile-image">
+                <img src="./img/profile_img.png" alt="#" class="profile-image2">
                 <canvas id="visualizer"></canvas>
                 <div id="controls">
                     <button id="playPause">▶</button>
