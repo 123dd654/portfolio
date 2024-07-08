@@ -135,12 +135,10 @@
             .cont01 {
             display: flex;
             width: 300px;
-            height: 82px;
-            margin-top: 10px;
-            background-image: url(./img/cont01.svg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            height: 76px;
+            margin-top: 14px;
+            border-left: 1px solid #6D6D6D;
+            border-right: 1px solid #6D6D6D;
 
             .tech {
                 width: 150px;
@@ -167,8 +165,8 @@
             .Temperature {
                 width: 75px;
                 height: 100%;
-                /* border-left: 1px solid #6D6D6D;
-                border-right: 1px solid #6D6D6D; */
+                border-left: 1px solid #6D6D6D;
+                border-right: 1px solid #6D6D6D;
                 text-align: center;
                 display: flex;
                 align-items: center;
@@ -187,18 +185,16 @@
 
             .cont02 {
             width: 300px;
-            height: 93px;
-            margin-top: 10px;
-            background-image: url(./img/cont02.svg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            height: 90px;
+            margin-top: 14px;
+            border-left: 1px solid #6D6D6D;
+            border-right: 1px solid #6D6D6D;
             display: flex;
 
             .drone_name {
                 width: 50%;
-                height: 93px;
-                /* border-right: 1px solid #6D6D6D; */
+                height: 90px;
+                border-right: 1px solid #6D6D6D;
                 text-align: center;
                 align-items: left;
                 justify-content: center;
@@ -302,12 +298,10 @@
 
             .cont03 {
             width: 300px;
-            height: 93px;
-            margin-top: 10px;
-            background-image: url(./img/cont03.svg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            height: 90px;
+            margin-top: 14px;
+            border-left: 1px solid #6D6D6D;
+            border-right: 1px solid #6D6D6D;
             display: flex;
             align-items: center;
             font-family: 'AstroSpace';
@@ -354,19 +348,17 @@
 
             .cont04 {
             width: 300px;
-            height: 82px;
+            height: 76px;
+            margin-top: 14px;
+            border-left: 1px solid #6D6D6D;
+            border-right: 1px solid #6D6D6D;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'AstroSpace';
             position: relative;
-            margin-top: 10px;
-            background-image: url(./img/cont04.svg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
 
-            /* &::before,
+            &::before,
             &::after {
                 content: '';
                 position: absolute;
@@ -400,20 +392,20 @@
 
             &::after {
                 bottom: 0;
-            } */
+            }
 
 
             .radiation_left {
                 width: 50%;
-                height: 60px;
-                /* border-right: 1px solid #6D6D6D; */
+                height: 76px;
+                border-right: 1px solid #6D6D6D;
                 position: relative;
 
                 .radiation_text {
                 display: flex;
                 flex-direction: column;
                 position: relative;
-                /* margin-top: 4px; */
+                margin-top: 4px;
 
                 span {
                     font-size: 14px;
@@ -631,17 +623,6 @@
         padding: 2px 4px;
         z-index: 1000;
         }
-
-        .blinking_path{
-            animation: blink-animation 1s steps(5, start) infinite;
-        }
-
-        @keyframes blink-animation {
-            to {
-                visibility: hidden;
-            }
-        }
-        
     </style>
 </head>
 <body>

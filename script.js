@@ -107,3 +107,24 @@ audioElement.addEventListener('ended', () => {
     isPlaying = false;
     playPauseBtn.textContent = '▶';
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const teamPro = document.querySelector('.teamPro');
+    const soloPro = document.querySelector('.soloPro');
+
+    function showClickImage(element) {
+        const clickImage = element.querySelector('.click-image');
+        clickImage.style.opacity = '1';
+    }
+
+    function hideClickImage(element) {
+        const clickImage = element.querySelector('.click-image');
+        clickImage.style.opacity = '0';
+    }
+
+    teamPro.addEventListener('mouseenter', () => showClickImage(teamPro));
+    teamPro.addEventListener('mouseleave', () => hideClickImage(teamPro));
+
+    soloPro.addEventListener('mouseenter', () => showClickImage(soloPro));
+    soloPro.addEventListener('mouseleave', () => hideClickImage(soloPro));
+});
