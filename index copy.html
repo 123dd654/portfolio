@@ -6,49 +6,50 @@
     <title>Document</title>
     <style>
         @font-face {
-        font-family: 'astro';
-        src: url('/fonts/astro.ttf') format('truetype');
+            font-family: 'astro';
+            src: url('/fonts/astro.ttf') format('truetype');
         }
 
         @font-face {
-        font-family: 'Orbitron';
-        src: url('/fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
+            font-family: 'Orbitron';
+            src: url('/fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
         }
 
         @font-face {
-        font-family: 'AstroSpace';
-        src: url('/fonts/AstroSpace-eZ2Bg.ttf') format('truetype');
+            font-family: 'AstroSpace';
+            src: url('/fonts/AstroSpace-eZ2Bg.ttf') format('truetype');
         }
 
         @font-face {
-        font-family: 'chopsic';
-        src: url('/fonts/Chopsic.otf') format('truetype');
+            font-family: 'chopsic';
+            src: url('/fonts/Chopsic.otf') format('truetype');
         }
 
         * {
-        margin: 0;
-        padding: 0;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-        background-color: #0A090F;
-        height: 100vh;
-        background-size: 20px 20px;
-        background-image: repeating-radial-gradient(rgb(72, 72, 72) 0px, black 2px, black 48px);
+            background-color: #0A090F;
+            height: 100vh;
+            background-size: 20px 20px;
+            background-image: repeating-radial-gradient(rgb(72, 72, 72) 0px, black 2px, black 48px);
         }
 
         #wrap {
-        width: 100%;
-        height: 100vh;
-        display: flex;
+            width: 100%;
+            height: 100vh;
+            display: flex;
         }
 
         #header {
-        width: 360px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+            width: 360px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         .titleimg {
             position: relative;
@@ -70,37 +71,37 @@
             font-family: 'AstroSpace';
             top: 204px;
             left: 180px;
+        }
 
-            p {
+        .voice p {
             color: #85A097;
             background-color: rgba(53, 70, 71, 0.6);
             font-size: 10px;
             padding: 4px 10px;
-            }
+        }
 
-            span {
+        .voice span {
             color: #85A097;
             font-size: 10px;
             margin-left: 6px;
-            }
         }
 
         .profile {
             width: 100%;
             margin-top: 40px;
             text-align: center;
+        }
 
-            .profile-image {
+        .profile-image {
             margin-top: 14px;
             position: relative;
             z-index: 1;
-            }
+        }
 
-            .profile-image2 {
+        .profile-image2 {
             position: absolute;
             top: 220px;
             left: 44px;
-            }
         }
 
         .contents__title {
@@ -112,191 +113,194 @@
             margin-top: 10px;
             border-top: 1px solid #6D6D6D;
             border-bottom: 1px solid #6D6D6D;
+        }
 
-            span {
+        .contents__title span {
             padding: 4px 8px;
             color: #BDBDBD;
             background-color: rgba(221, 221, 221, 0.4);
             text-align: center;
             font-size: 10px;
             font-family: 'AstroSpace';
-            }
+        }
 
-            p {
+        .contents__title p {
             color: #BDBDBD;
             text-align: center;
             font-size: 10px;
             font-family: 'AstroSpace';
             margin-left: 10px;
-            }
         }
 
         .contents {
-            .cont01 {
+            width: 300px;
+        }
+
+        .cont01 {
             display: flex;
             width: 300px;
             height: 76px;
             margin-top: 14px;
             border-left: 1px solid #6D6D6D;
             border-right: 1px solid #6D6D6D;
+        }
 
-            .tech {
-                width: 150px;
-                height: 100%;
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 2px;
-                font-family: 'AstroSpace';
+        .tech {
+            width: 150px;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            font-family: 'AstroSpace';
+        }
 
-                h2 {
-                color: #85A097;
-                font-size: 16px;
-                }
+        .tech h2 {
+            color: #85A097;
+            font-size: 16px;
+        }
 
-                p {
-                color: #566862;
-                font-size: 8px;
-                }
-            }
+        .tech p {
+            color: #566862;
+            font-size: 8px;
+        }
 
-            .Temperature {
-                width: 75px;
-                height: 100%;
-                border-left: 1px solid #6D6D6D;
-                border-right: 1px solid #6D6D6D;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+        .Temperature {
+            width: 75px;
+            height: 100%;
+            border-left: 1px solid #6D6D6D;
+            border-right: 1px solid #6D6D6D;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-            .spaceship {
-                width: 75px;
-                height: 100%;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            }
+        .spaceship {
+            width: 75px;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-            .cont02 {
+        .cont02 {
             width: 300px;
             height: 90px;
             margin-top: 14px;
             border-left: 1px solid #6D6D6D;
             border-right: 1px solid #6D6D6D;
             display: flex;
+        }
 
-            .drone_name {
-                width: 50%;
-                height: 90px;
-                border-right: 1px solid #6D6D6D;
-                text-align: center;
-                align-items: left;
-                justify-content: center;
-                display: flex;
-                flex-direction: column;
+        .drone_name {
+            width: 50%;
+            height: 90px;
+            border-right: 1px solid #6D6D6D;
+            text-align: center;
+            align-items: left;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
 
-                ul {
-                display: flex;
-                gap: 6px;
-                align-items: center;
-                justify-content: flex-start;
-                margin-left: 10px;
+        .drone_name ul {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            justify-content: flex-start;
+            margin-left: 10px;
+        }
 
-                li {
-                    list-style: none;
-                    font-family: 'AstroSpace';
-                    font-size: 12px;
-                    margin-bottom: 6px;
+        .drone_name li {
+            list-style: none;
+            font-family: 'AstroSpace';
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
 
-                    &:nth-child(1) {
-                    color: #566862;
-                    font-size: 12px;
-                    }
+        .drone_name li:nth-child(1) {
+            color: #566862;
+            font-size: 12px;
+        }
 
-                    &:nth-child(2) {
-                    color: #85A097;
-                    font-size: 10px;
-                    }
-                }
-                }
-            }
+        .drone_name li:nth-child(2) {
+            color: #85A097;
+            font-size: 10px;
+        }
 
-            .drone__id {
-                width: 50%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+        .drone__id {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-                .drone__id__title {
-                font-family: 'AstroSpace';
-                color: #BDBDBD;
-                font-size: 8px;
-                text-align: center;
-                background-color: rgba(221, 221, 221, 0.4);
-                padding: 4px 10px;
-                }
+        .drone__id__title {
+            font-family: 'AstroSpace';
+            color: #BDBDBD;
+            font-size: 8px;
+            text-align: center;
+            background-color: rgba(221, 221, 221, 0.4);
+            padding: 4px 10px;
+        }
 
-                .drone__explanation {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                margin-top: 6px;
+        .drone__explanation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 6px;
+        }
 
-                .drone__item {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
+        .drone__item {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
 
-                    .drone__img {
-                    margin-bottom: 6px;
-                    margin-left: 6px;
-                    margin-right: 6px;
+        .drone__img {
+            margin-bottom: 6px;
+            margin-left: 6px;
+            margin-right: 6px;
+        }
 
-                    img {
-                        width: 20px;
-                    }
-                    }
+        .drone__img img {
+            width: 20px;
+        }
 
-                    ul {
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                    font-family: 'AstroSpace';
+        .drone__item ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-family: 'AstroSpace';
+        }
 
-                    &:nth-child(2) {
-                        margin-right: 6px;
-                    }
+        .drone__item ul:nth-child(2) {
+            margin-right: 6px;
+        }
 
-                    li:nth-child(1) {
-                        color: #85A097;
-                        font-size: 2px;
-                    }
+        .drone__item li:nth-child(1) {
+            color: #85A097;
+            font-size: 2px;
+        }
 
-                    li:nth-child(2) {
-                        color: #566862;
-                        font-size: 4px;
-                        margin-top: 1px;
-                    }
+        .drone__item li:nth-child(2) {
+            color: #566862;
+            font-size: 4px;
+            margin-top: 1px;
+        }
 
-                    li:nth-child(3) {
-                        color: #566862;
-                        font-size: 2px;
-                        margin-top: 1px;
-                        line-height: 1.3;
-                    }
-                    }
-                }
-                }
-            }
-            }
+        .drone__item li:nth-child(3) {
+            color: #566862;
+            font-size: 2px;
+            margin-top: 1px;
+            line-height: 1.3;
+        }
 
-            .cont03 {
+        .cont03 {
             width: 300px;
             height: 90px;
             margin-top: 14px;
@@ -305,48 +309,46 @@
             display: flex;
             align-items: center;
             font-family: 'AstroSpace';
+        }
 
-            .airship_title {
-                width: 40%;
-                margin-left: 10px;
+        .airship_title {
+            width: 40%;
+            margin-left: 10px;
+        }
 
-                span {
-                color: #85a097;
-                font-size: 16px;
-                }
+        .airship_title span {
+            color: #85a097;
+            font-size: 16px;
+        }
 
-                p {
-                color: #566862;
-                font-size: 6px;
-                margin-top: 4px;
-                }
-            }
+        .airship_title p {
+            color: #566862;
+            font-size: 6px;
+            margin-top: 4px;
+        }
 
-            .gauges {
-                display: flex;
-                margin-right: 4px;
+        .gauges {
+            display: flex;
+            margin-right: 4px;
+        }
 
-                .gauge {
-                img {
-                    width: 80px;
+        .gauge img {
+            width: 80px;
+        }
 
-                    &:nth-child(1) {
-                    margin-right: -10px;
-                    margin-left: -8px;
-                    margin-bottom: -4px;
-                    }
-                }
+        .gauge img:nth-child(1) {
+            margin-right: -10px;
+            margin-left: -8px;
+            margin-bottom: -4px;
+        }
 
-                p {
-                    font-size: 8px;
-                    color: #566862;
-                    text-align: center;
-                }
-                }
-            }
-            }
+        .gauge p {
+            font-size: 8px;
+            color: #566862;
+            text-align: center;
+        }
 
-            .cont04 {
+        .cont04 {
             width: 300px;
             height: 76px;
             margin-top: 14px;
@@ -357,176 +359,142 @@
             justify-content: center;
             font-family: 'AstroSpace';
             position: relative;
-
-            &::before,
-            &::after {
-                content: '';
-                position: absolute;
-                width: 3px;
-                height: 3px;
-                background-color: #D9D9D9;
-                left: -2px;
-            }
-
-            &::before {
-                top: 0;
-            }
-
-            &::after {
-                bottom: 0;
-            }
-
-            &::before,
-            &::after {
-                content: '';
-                position: absolute;
-                width: 3px;
-                height: 3px;
-                background-color: #D9D9D9;
-                right: 0;
-            }
-
-            &::before {
-                top: 0;
-            }
-
-            &::after {
-                bottom: 0;
-            }
-
-
-            .radiation_left {
-                width: 50%;
-                height: 76px;
-                border-right: 1px solid #6D6D6D;
-                position: relative;
-
-                .radiation_text {
-                display: flex;
-                flex-direction: column;
-                position: relative;
-                margin-top: 4px;
-
-                span {
-                    font-size: 14px;
-                    color: #85A097;
-                    margin-left: 10px;
-                }
-                }
-
-                .bars {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: flex-end;
-                position: absolute;
-                top: 4px;
-                right: 10px;
-
-                .bar {
-                    height: 6px;
-                    margin: 2px 0;
-                    background-color: #687f7c;
-
-                    &.bar1 {
-                    width: 20px;
-                    background-color: #9FC9BB;
-                    }
-
-                    &.bar2 {
-                    width: 40px;
-                    background-color: #8FB7AA;
-                    }
-
-                    &.bar3 {
-                    width: 60px;
-                    background-color: #709186;
-                    }
-
-                    &.bar4 {
-                    width: 80px;
-                    background-color: #566862;
-                    }
-
-                    &.bar5 {
-                    width: 100px;
-                    background-color: #6D6D6D;
-                    }
-
-                    &.bar6 {
-                    width: 120px;
-                    background-color: #6D6D6D;
-                    }
-                }
-                }
-            }
-
-            .radiation_right {
-                width: 50%;
-                display: flex;
-                align-items: center;
-
-                ul {
-                list-style: none;
-                margin-left: 16px;
-                margin-right: 10px;
-
-                li {
-                    font-size: 10px;
-                    color: #85A097;
-                    margin-bottom: 2px;
-
-                    span {
-                    color: #566862;
-                    }
-                }
-                }
-            }
-            }
         }
 
-        
+       
+
+        .radiation_left {
+            width: 50%;
+            height: 76px;
+            border-right: 1px solid #6D6D6D;
+            position: relative;
+        }
+
+        .radiation_text {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-top: 4px;
+        }
+
+        .radiation_text span {
+            font-size: 14px;
+            color: #85A097;
+            margin-left: 10px;
+        }
+
+        .bars {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            position: absolute;
+            top: 4px;
+            right: 10px;
+        }
+
+        .bar {
+            height: 6px;
+            margin: 2px 0;
+            background-color: #687f7c;
+        }
+
+        .bar1 {
+            width: 20px;
+            background-color: #9FC9BB;
+        }
+
+        .bar2 {
+            width: 40px;
+            background-color: #8FB7AA;
+        }
+
+        .bar3 {
+            width: 60px;
+            background-color: #709186;
+        }
+
+        .bar4 {
+            width: 80px;
+            background-color: #566862;
+        }
+
+        .bar5 {
+            width: 100px;
+            background-color: #6D6D6D;
+        }
+
+        .bar6 {
+            width: 120px;
+            background-color: #6D6D6D;
+        }
+
+        .radiation_right {
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
+
+        .radiation_right ul {
+            list-style: none;
+            margin-left: 16px;
+            margin-right: 10px;
+        }
+
+        .radiation_right li {
+            font-size: 10px;
+            color: #85A097;
+            margin-bottom: 2px;
+        }
+
+        .radiation_right li span {
+            color: #566862;
+        }
+
         .header__bottom {
             margin-top: 10px;
+        }
 
-            .teamPro, .soloPro {
-                width: 300px;
-                height: 60px;
-                border-top: 1px solid #85A097;
-                border-bottom: 1px solid #85A097;
-                color: #BDBDBD;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 25px;
-                font-family: 'chopsic';
-                position: relative;
-                overflow: hidden;
-                transition: background-color 0.3s ease;
+        .teamPro,
+        .soloPro {
+            width: 300px;
+            height: 60px;
+            border-top: 1px solid #85A097;
+            border-bottom: 1px solid #85A097;
+            color: #BDBDBD;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-family: 'chopsic';
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
 
-                &:hover {
-                    cursor: pointer;
-                    background-color: rgba(133, 160, 151, 0.1);
-                }
+        .teamPro:hover,
+        .soloPro:hover {
+            cursor: pointer;
+            background-color: rgba(133, 160, 151, 0.1);
+        }
 
-                .click-image {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    opacity: 0;
-                    transition: opacity 0.3s ease;
-                    pointer-events: none;
-                }
+        .click-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
 
-                &:hover .click-image {
-                    opacity: 1;
-                }
-            }
+        .teamPro:hover .click-image,
+        .soloPro:hover .click-image {
+            opacity: 1;
+        }
 
-            .soloPro {
-                margin-top: 4px;
-            }
+        .soloPro {
+            margin-top: 4px;
         }
 
         .header__bottom__link {
@@ -536,93 +504,100 @@
             gap: 10px;
             align-items: center;
             justify-content: center;
+        }
 
-            .phone,
-            .git,
-            .comment,
-            .mail {
+        .phone,
+        .git,
+        .comment,
+        .mail {
             padding: 20px 24px;
             border: 1px solid #6D6D6D;
-
-            &:hover {
-                border: 1px solid #fff;
-                color: #fff;
-                background-color: rgba(133, 160, 151, 0.6);
-                cursor: pointer;
-            }
-            }
         }
+
+        .phone:hover,
+        .git:hover,
+        .comment:hover,
+        .mail:hover {
+            border: 1px solid #fff;
+            color: #fff;
+            background-color: rgba(133, 160, 151, 0.6);
+            cursor: pointer;
+        }
+
+        .bottom_line img {
+            width: 100%;
         }
 
         #main {
-        width: 70%;
-        height: 100%;
+            width: 70%;
+            height: 100%;
         }
 
         #feeds {
-        width: 10%;
-        height: 100%;
+            width: 10%;
+            height: 100%;
         }
 
         @keyframes blink1 {
-        0%, 100% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0;
-        }
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
         }
 
         @keyframes blink2 {
-        0%, 100% {
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
         }
 
         .bouncing-circle {
-        animation: blink1 2s infinite;
+            animation: blink1 2s infinite;
         }
 
         .bouncing-circle2 {
-        animation: blink2 2s infinite;
+            animation: blink2 2s infinite;
         }
 
         #visualizer {
-        width: 150px;
-        height: 40px;
-        margin-bottom: 5px;
-        position: absolute;
-        top: 260px;
-        left: 170px;
+            width: 150px;
+            height: 40px;
+            margin-bottom: 5px;
+            position: absolute;
+            top: 260px;
+            left: 170px;
         }
 
         #controls {
-        display: flex;
-        gap: 5px;
-        align-items: center;
-        position: absolute;
-        top: 290px;
-        left: 220px;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            position: absolute;
+            top: 290px;
+            left: 220px;
         }
 
         button {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 3px 6px;
-        cursor: pointer;
-        font-size: 10px;
-        z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 3px 6px;
+            cursor: pointer;
+            font-size: 10px;
+            z-index: 1000;
         }
 
         #repeat {
-        font-size: 16px;
-        padding: 2px 4px;
-        z-index: 1000;
+            font-size: 16px;
+            padding: 2px 4px;
+            z-index: 1000;
         }
+
     </style>
 </head>
 <body>
@@ -736,7 +711,6 @@
                                 </ul>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
 
@@ -821,6 +795,7 @@
         <div id="main"></div>
         <div id="feeds"></div>
     </div>
-    <script src="./script.js"></script>
+    
+    
 </body>
 </html>

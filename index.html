@@ -561,17 +561,6 @@
             }
         }
         }
-
-        #main {
-        width: 70%;
-        height: 100%;
-        }
-
-        #feeds {
-        width: 10%;
-        height: 100%;
-        }
-
         @keyframes blink1 {
         0%, 100% {
             opacity: 1;
@@ -639,6 +628,385 @@
         @keyframes blink-animation {
             to {
                 visibility: hidden;
+            }
+        }
+
+        #main {
+        width: calc(100% - 360px - 360px);
+        height: 100%;
+        }
+
+        #feeds {
+        width: 360px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        /* justify-content: center; */
+
+            .feed_title{
+                position: relative;
+                top: 40px;
+                
+                p{
+                    position: absolute;
+                    top: 0;
+                    right: 50px;
+                    font-size: 48px;
+                    color: #A5AD89;
+                    font-family: 'chopsic';
+                }
+            }
+
+
+            .feed_first{
+                position: absolute;
+                top: 110px;
+
+                .first__title{
+                    position: absolute;
+                    top: 0;
+                    color: #687f7c;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 300px;
+                    min-height: 31px;
+                    margin-top: 4px;
+
+                    span {
+                    padding: 4px 8px;
+                    color: #BDBDBD;
+                    background-color: rgba(221, 221, 221, 0.4);
+                    text-align: center;
+                    font-size: 10px;
+                    font-family: 'AstroSpace';
+                    }
+
+                    p {
+                    color: #BDBDBD;
+                    text-align: center;
+                    font-size: 10px;
+                    font-family: 'AstroSpace';
+                    margin-left: 10px;
+                    }
+                }
+
+                .calender{
+                    /* background-color: #fff; */
+                    /* border-top: 1px solid #6D6D6D;
+                    border-bottom: 1px solid #6D6D6D; */
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    table {
+                        border-collapse: collapse;
+                        width: 90%;
+                        text-align: center;
+                    }
+
+                    th, td {
+                        border-bottom: 1px solid #6D6D6D;
+                        padding: 6px;
+                        /* padding-top: 8px; */
+                        color: #BDBDBD;
+                        font-family: 'Orbitron';
+                        font-size: 8px;
+                    }
+
+                    th {
+                        background-color: #0A090F;
+                        color: #BDBDBD;
+                        border-top: 2px solid #6D6D6D;
+                        border-bottom: 2px solid #6D6D6D;
+                        font-family: 'AstroSpace';
+                        font-size: 8px;
+
+                        &[colspan="7"] {
+                        background-color: #0A090F;
+                        color: #BDBDBD;
+                        font-size: 16px;
+                        font-family: 'chopsic';
+                        text-align: left;
+                        }
+                    }
+                    
+                }
+            }
+
+            .feed_second{
+                position: absolute;
+                top: 330px;
+
+                .second__title{
+                    position: absolute;
+                    top: 0;
+                    color: #687f7c;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 300px;
+                    min-height: 31px;
+                    margin-top: 4px;
+
+                    span {
+                    padding: 4px 8px;
+                    color: #BDBDBD;
+                    background-color: rgba(221, 221, 221, 0.4);
+                    text-align: center;
+                    font-size: 10px;
+                    font-family: 'AstroSpace';
+                    }
+
+                    p {
+                    color: #BDBDBD;
+                    text-align: center;
+                    font-size: 10px;
+                    font-family: 'AstroSpace';
+                    margin-left: 10px;
+                    }
+                }
+
+                .radar {
+                    background: radial-gradient(circle, rgba(32, 255, 77, 0.3) 0%, rgba(32, 255, 77, 0) 75%), 
+                                repeating-radial-gradient(rgba(32, 255, 77, 0) 5.8%, rgba(32, 255, 77, 0) 18%, #656469 18.6%, rgba(32, 255, 77, 0) 18.9%), 
+                                linear-gradient(90deg, rgba(32, 255, 77, 0) 49.5%, #656469 50%, #656469 50%, rgba(32, 255, 77, 0) 50.2%), 
+                                linear-gradient(0deg, rgba(32, 255, 77, 0) 49.5%, #656469 50%, #656469 50%, rgba(32, 255, 77, 0) 50.2%);
+                    width: 150px;
+                    height: 150px;
+                    max-height: 75vh;
+                    max-width: 75vh;
+                    position: relative;
+                    border-radius: 50%;
+                    border: 0.2rem solid #656469;
+                    overflow: hidden;
+                    right: -80px;
+                    top: 4px;
+                }
+                .radar:before {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    animation: blips 5s infinite;
+                    animation-timing-function: linear;
+                    animation-delay: 1.4s;
+                }
+                .radar:after {
+                    content: " ";
+                    display: block;
+                    background-image: linear-gradient(44deg, rgba(0, 255, 51, 0) 50%, #00ff33 100%);
+                    width: 50%;
+                    height: 50%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    animation: radar-beam 5s infinite;
+                    animation-timing-function: linear;
+                    transform-origin: bottom right;
+                    border-radius: 100% 0 0 0;
+                }
+
+                @keyframes radar-beam {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+                @keyframes blips {
+                    14% {
+                        background: radial-gradient(2vmin circle at 75% 70%, white 10%, #656469 30%, rgba(255, 255, 255, 0) 100%);
+                    }
+                    14.0002% {
+                        background: radial-gradient(2vmin circle at 75% 70%, white 10%, #656469 30%, rgba(255, 255, 255, 0) 100%), 
+                                    radial-gradient(2vmin circle at 63% 72%, white 10%, #656469 30%, rgba(255, 255, 255, 0) 100%);
+                    }
+                    25% {
+                        background: radial-gradient(2vmin circle at 75% 70%, white 10%, #656469 30%, rgba(255, 255, 255, 0) 100%), 
+                                    radial-gradient(2vmin circle at 63% 72%, white 10%, #656469 30%, rgba(255, 255, 255, 0) 100%), 
+                                    radial-gradient(2vmin circle at 56% 86%, white 10%, #656469 30%, rgba(255, 255, 255, 0) 100%);
+                    }
+                    26% {
+                        background: radial-gradient(2vmin circle at 75% 70%, white 10%, #656469 30%, rgba(255, 255, 255, 0) 100%), 
+                                    radial-gradient(2vmin circle at 63% 72%, white 10%, #656469 30%, rgba(255, 255, 255, 0) 100%), 
+                                    radial-gradient(2vmin circle at 56% 86%, white 10%, #656469 30%, rgba(255, 255, 255, 0) 100%);
+                        opacity: 1;
+                    }
+                    100% {
+                        background: radial-gradient(2vmin circle at 75% 70%, white 10%, #656469 30%, rgba(255, 255, 255, 0) 100%), 
+                                    radial-gradient(2vmin circle at 63% 72%, white 10%, #656469 30%, rgba(255, 255, 255, 0) 100%), 
+                                    radial-gradient(2vmin circle at 56% 86%, white 10%, #656469 30%, rgba(255, 255, 255, 0) 100%);
+                        opacity: 0;
+                    }
+                }
+
+            }
+
+            .feed_third{
+                position: absolute;
+                top: 540px;
+
+                .third__title{
+                    position: absolute;
+                    top: 0;
+                    color: #687f7c;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 300px;
+                    min-height: 31px;
+                    margin-top: 4px;
+
+                    span {
+                    padding: 4px 8px;
+                    color: #BDBDBD;
+                    background-color: rgba(221, 221, 221, 0.4);
+                    text-align: center;
+                    font-size: 10px;
+                    font-family: 'AstroSpace';
+                    }
+
+                    p {
+                    color: #BDBDBD;
+                    text-align: center;
+                    font-size: 10px;
+                    font-family: 'AstroSpace';
+                    margin-left: 10px;
+                    }
+                }
+
+                .map-container {
+                    padding: 0.2rem 0;
+                    position: relative;
+                    
+                    img {
+                        width: 300px;
+                        filter: grayscale(100%);
+                    }
+                    
+                    .point {
+                        cursor: pointer;
+                        position: absolute;
+                        width: 0.2rem;
+                        height: 0.2rem;
+                        background-color: #85A097;
+                        border-radius: 50%;
+                        transition: all 0.3s ease;
+                        will-change: transform, box-shadow;
+                        transform: translate(-50%, -50%);
+                        box-shadow: 0 0 0 rgba(0, 172, 193, 0.4);
+                        animation: pulse 3s infinite;
+                        
+                        &:hover {
+                        animation: none;
+                        transform: translate(-50%, -50%) scale3D(1.35, 1.35, 1);
+                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                        }
+                    }
+                    
+                    .venezuela { top: 54%; left: 24%; }
+                    .brasil { top: 64%; left: 28%; }
+                    .argentina { top: 77%; left: 27%; }
+                    .colombia { top: 55%; left: 21%; }
+                    .panama { top: 51%; left: 18%; }
+                    .mexico { top: 38%; left: 12%; }
+                    .usa { top: 26%; left: 17%; }
+                    .arabia { top: 40%; left: 53%; }
+                    .turquia { top: 31%; left: 57%; }
+                    .rusia { top: 16%; left: 67%; }
+                    .china { top: 40%; left: 72%; }
+                    .japon { top: 34%; left: 86%; }
+                    .australia { top: 72%; left: 86%; }
+                    
+                    @keyframes pulse {
+                    0% {
+                        box-shadow: 0 0 0 0 rgba(0, 172, 193, 0.5);
+                    }
+                    70% {
+                        box-shadow: 0 0 0 25px rgba(0, 172, 193, 0);
+                    }
+                    100% {
+                        box-shadow: 0 0 0 0 rgba(0, 172, 193, 0);
+                    }
+                    }
+
+                }
+            }
+
+            .feed_fourth{
+                position: absolute;
+                top: 740px;
+
+                .fourth__title{
+                    position: absolute;
+                    top: 0;
+                    color: #687f7c;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 300px;
+                    min-height: 31px;
+                    margin-top: 4px;
+
+                    span {
+                    padding: 4px 8px;
+                    color: #BDBDBD;
+                    background-color: rgba(221, 221, 221, 0.4);
+                    text-align: center;
+                    font-size: 10px;
+                    font-family: 'AstroSpace';
+                    }
+
+                    p {
+                    color: #BDBDBD;
+                    text-align: center;
+                    font-size: 10px;
+                    font-family: 'AstroSpace';
+                    margin-left: 10px;
+                    }
+                }
+
+                .stage {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                }
+
+                .controls {
+                    position: absolute;
+                    bottom: 70px;
+                    display: flex;
+                    /* gap: 4px; */
+                    
+                    
+                    .volume-control {
+                        display: flex;
+                        align-items: center;
+                        
+                    }
+                    
+                    .volume-control input {
+                        margin-left: 10px;
+                        color: #fff;
+                    }
+                }
+
+
+            }
+
+            .bottom_line{
+                position: absolute;
+                top: 1030px;
             }
         }
         
@@ -837,8 +1205,74 @@
                 <img src="./img/bottom_line.svg" alt="">
             </div>
         </div>
-        <div id="main"></div>
-        <div id="feeds"></div>
+        <div id="main">
+        
+        </div>
+        <div id="feeds">
+            <div class="feed_title">
+                <img src="./img/profile_line01.svg" alt="">
+                <p>feeds</p>
+            </div>
+            <div class="feed_first">
+                <img src="./img/feed_line01.svg" alt="">
+                <div class="first__title">
+                    <span>section 01</span>
+                    <p>this month calendar</p>
+                </div>
+                <div class="calender" id="calendar"></div>
+            </div>
+            <div class="feed_second">
+                <img src="./img/feed_line01.svg" alt="">
+                <div class="second__title">
+                    <span>section 02</span>
+                    <p>Uncovering Hidden Worlds</p>
+                </div>
+                <div class="radar"></div>
+            </div>
+            <div class="feed_third">
+                <img src="./img/feed_line01.svg" alt="">
+                <div class="third__title">
+                    <span>section 03</span>
+                    <p>Navigating the World Around Us</p>
+                </div>
+                <div class="map map-container">
+                    <img src="http://res.cloudinary.com/slzr/image/upload/v1500321012/world-map-1500_vvekl5.png">
+                    <div class="point venezuela tippy" title="Venezuela"></div>
+                    <div class="point brasil tippy" title="Brasil"></div>
+                    <div class="point argentina tippy" title="Argentina"></div>
+                    <div class="point colombia tippy" title="Colombia"></div>
+                    <div class="point panama tippy" title="Panamá"></div>
+                    <div class="point mexico tippy" title="Mexico"></div>
+                    <div class="point usa tippy" title="Estados Unidos"></div>
+                    <div class="point arabia tippy" title="Arabia Saudi"></div>
+                    <div class="point turquia tippy" title="Turquía"></div>
+                    <div class="point rusia tippy" title="Rusia"></div>
+                    <div class="point china tippy" title="China"></div>
+                    <div class="point japon tippy" title="Japon"></div>
+                    <div class="point australia tippy" title="Australia"></div>
+                </div>
+            </div>
+            <div class="feed_fourth">
+                <img src="./img/feed_line01.svg" alt="">
+                <div class="fourth__title">
+                    <span>section 04</span>
+                    <p>let’s start musicplay</p>
+                </div>
+                <div class="stage"></div>
+                <div class="controls">
+                    <button id="play">Play</button>
+                    <button id="pause">Pause</button>
+                    <button id="restart">Restart</button>
+                    <div class="volume-control">
+                        <label for="volume">Volume</label>
+                        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_line">
+                <img src="./img/bottom_line.svg" alt="">
+            </div>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>

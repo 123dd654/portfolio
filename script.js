@@ -1,130 +1,116 @@
-function updateTime() {
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    const timeString = `${hours}:${minutes}:${seconds}`;
-    document.getElementById('time-text').textContent = timeString;
-}
+//달력
+function generateCalendar(year, month) {
+    const calendar = document.getElementById('calendar');
+    if (!calendar) {
+        console.error('Calendar element not found');
+        return;
+    }
+    
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const firstDay = new Date(year, month, 1).getDay();
 
-setInterval(updateTime, 1000);
-updateTime();  // 초기 호출로 즉시 업데이트
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-const canvas = document.getElementById('visualizer');
-const ctx = canvas.getContext('2d');
-const playPauseBtn = document.getElementById('playPause');
-const repeatBtn = document.getElementById('repeat');
-const audioElement = document.getElementById('audioElement');
+    let table = '<table>';
+    table += `<tr><th colspan="7">${monthNames[month]} ${year}</th></tr>`;
+    table += '<tr>' + dayNames.map(day => `<th>${day}</th>`).join('') + '</tr><tr>';
 
-let audioContext, analyser, source, dataArray, bufferLength;
-let isPlaying = false;
+    for (let i = 0; i < firstDay; i++) {
+        table += '<td></td>';
+    }
 
-canvas.width = 500;
-canvas.height = 100;
-
-function initAudio() {
-    audioContext = new (window.AudioContext || window.webkitAudioContext)();
-    analyser = audioContext.createAnalyser();
-    analyser.fftSize = 2048;
-    bufferLength = analyser.frequencyBinCount;
-    dataArray = new Uint8Array(bufferLength);
-
-    source = audioContext.createMediaElementSource(audioElement);
-    source.connect(analyser);
-    analyser.connect(audioContext.destination);
-}
-
-function drawWaveform() {
-    requestAnimationFrame(drawWaveform);
-
-    if (audioContext) {
-        analyser.getByteTimeDomainData(dataArray);
-    } else {
-        // 초기 상태에서는 평평한 선을 그립니다
-        for (let i = 0; i < bufferLength; i++) {
-            dataArray[i] = 128;
+    for (let day = 1; day <= daysInMonth; day++) {
+        if ((firstDay + day - 1) % 7 === 0 && day !== 1) {
+            table += '</tr><tr>';
         }
+        table += `<td>${day}</td>`;
     }
 
-    ctx.fillStyle = 'rgb(0, 0, 0)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = 'rgb(255, 255, 255)';
-    ctx.beginPath();
-
-    const sliceWidth = canvas.width * 1.0 / bufferLength;
-    let x = 0;
-
-    for (let i = 0; i < bufferLength; i++) {
-        const v = dataArray[i] / 128.0;
-        const y = v * canvas.height / 2;
-
-        if (i === 0) {
-            ctx.moveTo(x, y);
-        } else {
-            ctx.lineTo(x, y);
-        }
-
-        x += sliceWidth;
-    }
-
-    ctx.lineTo(canvas.width, canvas.height / 2);
-    ctx.stroke();
+    table += '</tr></table>';
+    calendar.innerHTML = table;
 }
 
-// 초기 상태에서 평평한 선을 그리기 위해 bufferLength와 dataArray를 초기화합니다
-bufferLength = 1024;
-dataArray = new Uint8Array(bufferLength).fill(128);
-
-drawWaveform();
-
-playPauseBtn.addEventListener('click', () => {
-    if (!audioContext) {
-        initAudio();
-    }
-
-    if (isPlaying) {
-        audioElement.pause();
-        playPauseBtn.textContent = '▶';
-    } else {
-        audioElement.play();
-        playPauseBtn.textContent = '❚❚';
-    }
-    isPlaying = !isPlaying;
-});
-
-repeatBtn.addEventListener('click', () => {
-    audioElement.currentTime = 0;
-    if (!isPlaying) {
-        audioElement.play();
-        playPauseBtn.textContent = '❚❚';
-        isPlaying = true;
-    }
-});
-
-audioElement.addEventListener('ended', () => {
-    isPlaying = false;
-    playPauseBtn.textContent = '▶';
-});
-
+//네번째 뮤직플레이어
 document.addEventListener('DOMContentLoaded', function() {
-    const teamPro = document.querySelector('.teamPro');
-    const soloPro = document.querySelector('.soloPro');
+    generateCalendar(2024, 7); // August 2024 (month is 0-indexed)
 
-    function showClickImage(element) {
-        const clickImage = element.querySelector('.click-image');
-        clickImage.style.opacity = '1';
-    }
+    const $ = document.querySelector.bind(document);
+    const stage = $('.stage');
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
 
-    function hideClickImage(element) {
-        const clickImage = element.querySelector('.click-image');
-        clickImage.style.opacity = '0';
-    }
+    canvas.width = 300;
+    canvas.height = 300;
+    stage.appendChild(canvas);
 
-    teamPro.addEventListener('mouseenter', () => showClickImage(teamPro));
-    teamPro.addEventListener('mouseleave', () => hideClickImage(teamPro));
+    const audioFiles = [
+        './music/dannyminus - Give It to Me.mp3',
+        './music/CustomMelody - Joy Dealer.mp3',
+        './music/Carmel Quartet - Eine Kleine Nachtmusik.mp3',
+        './music/Randy Sharp - Chique N Teriyaki.mp3',
+        './music/Steven Beddall - Escape Velocity.mp3'
+        // 추가 오디오 파일 경로
+    ];
+    
+    let currentAudioIndex = 0;
+    const audioElement = new Audio(audioFiles[currentAudioIndex]);
 
-    soloPro.addEventListener('mouseenter', () => showClickImage(soloPro));
-    soloPro.addEventListener('mouseleave', () => hideClickImage(soloPro));
+    audioElement.addEventListener('ended', () => {
+        currentAudioIndex = (currentAudioIndex + 1) % audioFiles.length;
+        audioElement.src = audioFiles[currentAudioIndex];
+        audioElement.play();
+    });
+
+    audioElement.addEventListener('error', (e) => {
+        console.error("Audio error: ", e);
+    });
+
+    const visualizer = {
+        bar: { width: 1, height: 40, color: 'white' },
+        radius: 60
+    };
+    const pieces = 400;
+    let audio = Array(pieces).fill(null).map(() => Math.random());
+
+    const update = () => {
+        audio = audio.map(x => Math.random() > 0.5 ? Math.max(x - 0.01, 0.02) : Math.min(x + 0.01, 1));
+    };
+
+    const render = () => {
+        const spacing = 360 / audio.length;
+        const origin = { x: canvas.width / 2 - visualizer.bar.width / 2, y: canvas.height / 2 - visualizer.bar.height };
+        
+        context.fillStyle = '#fff';
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        for (const [i, piece] of audio.entries()) {
+            const degrees = i * spacing;
+            const radians = degrees / 180 * Math.PI;
+
+            context.save();
+            context.translate(origin.x, origin.y);
+            context.rotate(radians);
+            context.fillRect(visualizer.bar.width / -2, visualizer.radius, visualizer.bar.width, visualizer.bar.height * piece);
+            context.restore();
+        }
+
+        update();
+        requestAnimationFrame(render);
+    };
+
+    render();
+
+    // Controls
+    $('#play').addEventListener('click', () => audioElement.play());
+    $('#pause').addEventListener('click', () => audioElement.pause());
+    $('#restart').addEventListener('click', () => {
+        audioElement.currentTime = 0;
+        audioElement.play();
+    });
+    $('#volume').addEventListener('input', (event) => {
+        audioElement.volume = event.target.value;
+    });
 });
+
+
