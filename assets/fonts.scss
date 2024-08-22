@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://websfont.github.io/websfont/websfont.css");
+
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NanumSquareNeo";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot");
+  src: url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff2")
+      format("woff2"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff")
+      format("woff"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NanumSquareNeo";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot");
+  src: url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff2")
+      format("woff2"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff")
+      format("woff"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NanumSquareNeo";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot");
+  src: url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff2")
+      format("woff2"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff")
+      format("woff"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NanumSquareNeo";
+  font-weight: 800;
+  font-style: normal;
+  src: url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot");
+  src: url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff2")
+      format("woff2"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff")
+      format("woff"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NanumSquareNeo";
+  font-weight: 900;
+  font-style: normal;
+  src: url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot");
+  src: url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff2")
+      format("woff2"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff")
+      format("woff"),
+    url("https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.ttf")
+      format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+    format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SK Concretica Trial";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SK Concretica Trial"),
+    url("../fonts/sk-concretica-trial.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Concretica";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Concretica"), url("../fonts/concrete-regular.otf") format("off");
+}
+// 2024 07 11 폰트 추가
+@font-face {
+  font-family: "NeoGeoTrial-Regular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/NeoGeoTrial-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeoGeoTrial-Thin";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/NeoGeoTrial-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeoGeoTrial-Light";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/NeoGeoTrial-Light.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeoGeoTrial-ExtraLight";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/NeoGeoTrial-ExtraLight.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeoGeoTrial-Thin";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AztecaTrial-Kingsize";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/AztecaTrial-Kingsize.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AztecaTrial-Text";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/AztecaTrial-Text.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AfricaTrial-Rainfall";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/AfricaTrial-Rainfall.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AfricaTrial-Drylands";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/AfricaTrial-Drylands.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AfricaTrial-Cliff";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/AfricaTrial-Cliff.woff2") format("woff2");
+  font-display: swap;
+}
