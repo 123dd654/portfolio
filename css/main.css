@@ -936,6 +936,20 @@
   text-align: center;
   width: 100%;
 }
+
+.smooth__wrapper
+  .smooth__content
+  .main__inner
+  .content__section
+  .content__home__wrapper
+  .content__home__inner
+  .project__card__wrap
+  .project__card__inner
+  .project__card
+  .project__card__block
+  a {
+  z-index: 99999999999;
+}
 .smooth__wrapper
   .smooth__content
   .main__inner

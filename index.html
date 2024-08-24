@@ -725,39 +725,15 @@
                             class="skill__card__inner"
                             onclick="projectCardClick(event)"
                           >
-                            <h4 class="card__top__header">나만의 개발일지</h4>
+                            <h4 class="card__top__header">
+                              독창적인, 남의 것을 모방하지 않고 새로운 것을
+                              만들어내는 개발자
+                            </h4>
                             <h3
                               class="card__main__header"
-                              data-shadow="Show My"
+                              data-shadow="ORIGINAL"
                             >
-                              <span>Show My</span>
-                            </h3>
-                          </a>
-                        </li>
-                        <li class="skill__card show-project">
-                          <a
-                            href="/"
-                            class="skill__card__inner"
-                            onclick="projectCardClick(event)"
-                          >
-                            <h4 class="card__top__header">나만의 개발일지</h4>
-                            <h3
-                              class="card__main__header"
-                              data-shadow="ProJects"
-                            >
-                              <span>ProJects</span>
-                            </h3>
-                          </a>
-                        </li>
-                        <li class="skill__card show-project">
-                          <a
-                            href="/"
-                            class="skill__card__inner"
-                            onclick="projectCardClick(event)"
-                          >
-                            <h4 class="card__top__header">개발 일정 관리</h4>
-                            <h3 class="card__main__header" data-shadow="Dately">
-                              <span>Dately</span>
+                              <span>ORIGINAL</span>
                             </h3>
                           </a>
                         </li>
@@ -768,13 +744,14 @@
                             onclick="projectCardClick(event)"
                           >
                             <h4 class="card__top__header">
-                              한 눈에 보는 신용카드
+                              선견지명이 있는, 미래를 내다보고 계획을 세우는
+                              개발자
                             </h4>
                             <h3
                               class="card__main__header"
-                              data-shadow="CardDive"
+                              data-shadow="VISIONARY"
                             >
-                              <span>CardDive</span>
+                              <span>VISIONARY</span>
                             </h3>
                           </a>
                         </li>
@@ -785,10 +762,31 @@
                             onclick="projectCardClick(event)"
                           >
                             <h4 class="card__top__header">
-                              일상 속의 여유 찾기
+                              창의적인, 문제를 해결하기 위해 새로운 방식을
+                              고안하는 개발자
                             </h4>
-                            <h3 class="card__main__header" data-shadow="Druwa">
-                              <span>Druwa</span>
+                            <h3
+                              class="card__main__header"
+                              data-shadow="INVENTIVE"
+                            >
+                              <span>INVENTIVE</span>
+                            </h3>
+                          </a>
+                        </li>
+                        <li class="skill__card show-project">
+                          <a
+                            href="/"
+                            class="skill__card__inner"
+                            onclick="projectCardClick(event)"
+                          >
+                            <h4 class="card__top__header">
+                              끊임없는, 포기하지 않고 계속해서 도전하는 개발자
+                            </h4>
+                            <h3
+                              class="card__main__header"
+                              data-shadow="RELENTLESS"
+                            >
+                              <span>RELENTLESS</span>
                             </h3>
                           </a>
                         </li>
@@ -1256,22 +1254,22 @@
         });
       }
 
-      // document.querySelectorAll(".project__card").forEach((card) => {
-      //   card.addEventListener("click", (event) => {
-      //     event.preventDefault();
-      //     event.stopPropagation(); // 이벤트 전파를 막음
+      document.querySelectorAll(".project__card").forEach((card) => {
+        card.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation(); // 이벤트 전파를 막음
 
-      //     gsap.to(".hide__ani__section", {
-      //       width: "100%",
-      //       duration: 2,
-      //     });
+          gsap.to(".hide__ani__section", {
+            width: "100%",
+            duration: 2,
+          });
 
-      //     gsap.to(".project__main__name", {
-      //       opacity: 1,
-      //       duration: 2,
-      //     });
-      //   });
-      // });
+          gsap.to(".project__main__name", {
+            opacity: 1,
+            duration: 2,
+          });
+        });
+      });
     });
   </script>
 </html>
